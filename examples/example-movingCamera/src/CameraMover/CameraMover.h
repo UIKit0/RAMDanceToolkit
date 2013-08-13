@@ -138,11 +138,11 @@ public:
 				ofPushStyle();
 				{
 					ofSetColor(50);
-					ofBox(newPos, 10);
+					ofDrawBox(newPos, 10);
 					
 					ofSetColor(255,0,0);
-					ofBox(from, 10);
-					ofBox(to, 10);
+					ofDrawBox(from, 10);
+					ofDrawBox(to, 10);
 					ofDrawArrow(newPos, lookAt, 10);					
 				}
 				ofPopStyle();

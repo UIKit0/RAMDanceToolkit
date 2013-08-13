@@ -94,7 +94,7 @@ public:
 //				ofPushMatrix();
 //				node.beginTransform();
 //				ofFill();
-//				ofBox((i==ramActor::JOINT_HEAD) ? 6 : 3);
+//				ofDrawBox((i==ramActor::JOINT_HEAD) ? 6 : 3);
 //				ofSetColor(cur);
 //				node.endTransform();
 //				ofPopMatrix();

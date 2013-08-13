@@ -83,7 +83,7 @@ void testApp::draw()
 			const ramNode& node = f6.getNode(n);
 			node.beginTransform();
 			ofNoFill();
-			ofBox(5);
+			ofDrawBox(5);
 			ofDrawAxis(5);
 			node.endTransform();
 			

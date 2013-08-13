@@ -64,7 +64,7 @@ void testApp::draw()
 	{
 		ofSetColor(ramColor::YELLOW_NORMAL);
 		ramNode &node = rightHands.at(i);
-		ofSphere(node, 10);
+		ofDrawSphere(node, 10);
 	}
 	
 	
@@ -73,7 +73,7 @@ void testApp::draw()
 	{
 		ofSetColor(ramColor::RED_LIGHT);
 		ramNode &node = leftHands.at(i);
-		ofSphere(node, 10);
+		ofDrawSphere(node, 10);
 	}
 	
 	ramEndCamera();

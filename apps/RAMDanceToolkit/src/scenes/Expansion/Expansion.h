@@ -103,7 +103,7 @@ public:
 				if (mShowBox)
 				{
 					ofSetColor(mBoxColor);
-					ofBox(boxSize);
+					ofDrawBox(boxSize);
 				}
 				
 				if (mShowAxis)

@@ -78,7 +78,7 @@ public:
 					
 					ofNoFill();
 					ofSetColor(255, 30);
-					ofBox(100);
+					ofDrawBox(100);
 					
 					glPopMatrix();
 					

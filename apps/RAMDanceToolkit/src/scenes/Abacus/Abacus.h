@@ -83,7 +83,7 @@ public:
 			ofLine(ofVec3f(-width, pos.y, 0), ofVec3f(width, pos.y, 0));
 			
 			glTranslatef(width*2/(numNodeArrays+1)*(index+1) - width, 0, 0);
-			ofBox(pos, box_size);
+			ofDrawBox(pos, box_size);
 			
 			glPopMatrix();
 		}

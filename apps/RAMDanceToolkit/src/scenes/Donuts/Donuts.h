@@ -118,7 +118,7 @@ public:
 					
 					node.beginTransform();
 					ofSetColor(c1);
-					ofBox( i==ramActor::JOINT_HEAD ? 8 : 5);
+					ofDrawBox( i==ramActor::JOINT_HEAD ? 8 : 5);
 					node.endTransform();
 					
 					if (node.hasParent())
@@ -164,7 +164,7 @@ public:
 						
 						node.beginTransform();
 						ofSetColor(c2);
-						ofBox(mBoxSize);
+						ofDrawBox(mBoxSize);
 						node.endTransform();
 					}
 					ofPopMatrix();

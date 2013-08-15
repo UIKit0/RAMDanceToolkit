@@ -34,10 +34,6 @@ public:
 	// events
 	void ramEnableAllEvents()
 	{
-		ofAddListener(ofEvents().update, this, &ramBaseApp::update);
-		ofAddListener(ofEvents().draw, this, &ramBaseApp::draw);
-		ofAddListener(ofEvents().exit, this, &ramBaseApp::exit);
-
 		ofAddListener(ramActorManager::instance().actorSetup, this, &ramBaseApp::actorSetup);
 		ofAddListener(ramActorManager::instance().actorExit, this, &ramBaseApp::actorExit);
 		ofAddListener(ramActorManager::instance().rigidSetup, this, &ramBaseApp::rigidSetup);
@@ -45,10 +41,6 @@ public:
 	}
 	void ramDisableAllEvents()
 	{
-		ofRemoveListener(ofEvents().update, this, &ramBaseApp::update);
-		ofRemoveListener(ofEvents().draw, this, &ramBaseApp::draw);
-		ofRemoveListener(ofEvents().exit, this, &ramBaseApp::exit);
-
 		ofRemoveListener(ramActorManager::instance().actorSetup, this, &ramBaseApp::actorSetup);
 		ofRemoveListener(ramActorManager::instance().actorExit, this, &ramBaseApp::actorExit);
 		ofRemoveListener(ramActorManager::instance().rigidSetup, this, &ramBaseApp::rigidSetup);
@@ -71,6 +63,12 @@ public:
 	void drawFloor();
 	void setDrawFloorAuto(bool v = true) { draw_floor_auto = v; }
 	void updateWithOscMessage(const ofxOscMessage &m) { getActorManager().updateWithOscMessage(m); }
+	
+protected:
+	
+	virtual void update() {}
+	virtual void draw() {}
+	virtual void exit() {}
 
 private:
 

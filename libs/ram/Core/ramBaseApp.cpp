@@ -26,11 +26,15 @@ void ramBaseApp::exit(ofEventArgs &args)
 {
 	ramDisableAllEvents();
 	ofSetFullscreen(false);
+	
+	exit();
 }
 
 void ramBaseApp::update(ofEventArgs &args)
 {
 	getActorManager().update();
+	
+	update();
 }
 
 void ramBaseApp::draw(ofEventArgs &args)
@@ -70,6 +74,8 @@ void ramBaseApp::draw(ofEventArgs &args)
 	ramEndCamera();
 
 	glPopAttrib();
+	
+	draw();
 }
 
 void ramBaseApp::drawNodeArrays()
